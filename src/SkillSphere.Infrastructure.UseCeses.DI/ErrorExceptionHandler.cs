@@ -59,6 +59,11 @@ public class ErrorExceptionHandler
                 });
                 result = JsonSerializer.Serialize(new { errors });
                 break;
+            case Exception ex:
+                statusCode = HttpStatusCode.BadRequest;
+                var errorMessage = "Error: " + ex.Message;
+                result = JsonSerializer.Serialize(new { errorMessage });
+                break;
             default:
                 result = JsonSerializer.Serialize(new { error = "An unexpected error occurred." });
                 break;

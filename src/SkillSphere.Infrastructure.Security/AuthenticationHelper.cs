@@ -68,7 +68,7 @@ public static class AuthenticationHelper
                 options.SecretKey = jwtSettings.SecretKey;
                 options.Issuer = jwtSettings.Issuer;
                 options.AccessTokenLifetimeInMinutes = jwtSettings.AccessTokenLifetimeInMinutes;
-                options.RefreshTokenLifetimeInMinutes = jwtSettings.RefreshTokenLifetimeInMinutes;
+                options.RefreshTokenLifetimeInDays = jwtSettings.RefreshTokenLifetimeInDays;
             });
         });
 

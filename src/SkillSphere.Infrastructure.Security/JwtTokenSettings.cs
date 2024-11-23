@@ -23,5 +23,5 @@ public class JwtTokenSettings
     /// <summary>
     /// Время жизни refresh токена в минутах.
     /// </summary>
-    public double RefreshTokenLifetimeInMinutes { get; set; }
+    public double RefreshTokenLifetimeInDays { get; set; }
 }
